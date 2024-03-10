@@ -94,36 +94,27 @@ onMounted(() => {
   });
 });
 
-
-function updateColor(color) {//this is the change done
+function updateColor(color) {
   boardStore.updateColumnColor(props.columnIndex, color);
 }
 
-
-
 function lightenColor(color) {
-  // Convert HEX color to RGB
   const [r, g, b] = color.match(/\w\w/g).map(hex => parseInt(hex, 16));
 
-  // Adjust brightness (additive)
-  const brightness = 90; // Adjust this value for lighter or darker colors
+  const brightness = 90;
   const adjustedR = Math.min(r + brightness, 255);
   const adjustedG = Math.min(g + brightness, 255);
   const adjustedB = Math.min(b + brightness, 255);
 
-  // Convert adjusted RGB back to HEX
   const adjustedColor = `#${adjustedR.toString(16)}${adjustedG.toString(16)}${adjustedB.toString(16)}`;
 
   return adjustedColor;
 }
-
 </script>
 
-
-<!-------------------------------------------------------------------------------------------------------- -->
 <template>
   <UContainer
-    class="column border-2 w-[22vw]  "
+    class="column border-2 w-[22vw] "
     draggable="true"
     @dragstart.self="pickupColumn($event, columnIndex)"
     @dragenter.prevent
@@ -131,7 +122,7 @@ function lightenColor(color) {
     @drop.stop="dropItem($event, { toColumnIndex: columnIndex })"
   >
 
-    <div class="column-header  p-2 flex items-center border-2 rounded-lg  truncate">
+    <div class="column-header  p-2 flex items-center border-2 rounded-lg ">
       <div>
         <div class="flex items-center ">
           <UInput v-if="editNameState" type="text" v-model="column.name"  />
@@ -184,7 +175,6 @@ function lightenColor(color) {
 
     <ul class="column-tasks">
       <li v-for="(task, taskIndex) in column.tasks" :key="task.id">
-        <TaskView :task="task" :backgroundColor="lightenColor(column.color)" />
         <UCard
         class="mb-2 p-1 task-card border-2 w-full h-20 overflow-hidden flex items-center truncate"
         :style="{ backgroundColor: lightenColor(column.color) }"
@@ -219,11 +209,9 @@ function lightenColor(color) {
 
   </UContainer>
 </template>
-
 <style scoped>
-
 .column-tasks {
-  max-height: 100%; /* Adjust as needed */
+  max-height: 100%;
   overflow-y: auto;
 }
 
