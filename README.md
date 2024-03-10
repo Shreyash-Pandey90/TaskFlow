@@ -1,10 +1,9 @@
 <h1 align="center">TaskFlow</h1>
 
-<div align="center">
-  <a href="TaskFlow/Demo.mp4">
-    <img src="Demo.mp4/0.jpg" alt="Project Demo" width="600">
-  </a>
-</div>
+
+https://github.com/Shreyash-Pandey90/TaskFlow/assets/93475758/7e56d234-ee4c-4f24-b179-abcccd3b7107
+
+
 
 ## Hosting
 The project is currently hosted on [Netfly]. You can access it ("https://shreyashtaskflow.netlify.app/).
