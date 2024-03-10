@@ -1,7 +1,19 @@
-# Nuxt 3 Minimal Starter
+<h1 align="center">TaskFlow</h1>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<div align="center">
+  <a href="TaskFlow/Demo.mp4">
+    <img src="Demo.mp4/0.jpg" alt="Project Demo" width="600">
+  </a>
+</div>
 
+## Hosting
+The project is currently hosted on [Netfly]. You can access it ("https://shreyashtaskflow.netlify.app/).
+
+## About
+Built using <b>--Nuxt.js--</b><vr> , a powerful framework for building Vue.js applications.
+
+
+---
 ## Setup
 
 Make sure to install the dependencies:
@@ -67,9 +79,3 @@ pnpm run preview
 
 # yarn
 yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
